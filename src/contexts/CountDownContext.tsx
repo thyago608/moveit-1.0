@@ -42,7 +42,7 @@ export function CountDownContextProvider({ children }: CountDownContextProviderP
         Estado com 25 milisegundos  -> 25 min
         25 => minutos      60 => segundos
     */
-    const [time, setTime] = useState(0.1 * 60);
+    const [time, setTime] = useState(25 * 60);
 
 
     //Arredondando para baixo para não ter minutos quebrados
@@ -70,7 +70,7 @@ export function CountDownContextProvider({ children }: CountDownContextProviderP
     function resetCountDown() {
         clearTimeout(countdownTimeOut);
         setIsActive(false);
-        setTime(0.1 * 60);
+        setTime(25 * 60);
         setHasFinished(false);
     }
 
